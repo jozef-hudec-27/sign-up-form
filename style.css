@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.logo-container {
+    display: flex;
+    background-image: url('./bg.jpg');
+    background-position: center;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    flex-grow: 2;
+}
+
+.logo {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
