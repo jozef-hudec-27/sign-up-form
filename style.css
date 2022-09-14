@@ -6,16 +6,18 @@ body {
 }
 
 .logo-container {
+    width: 35%;
     display: flex;
     background-image: url('./bg.jpg');
     background-position: center;
-    flex-grow: 1;
     justify-content: center;
     align-items: center;
 }
 
 .content-container {
-    flex-grow: 2;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
@@ -25,4 +27,11 @@ body {
     padding: 1em;
     display: flex;
     justify-content: center;
+}
+
+.content-text-container {
+    font-size: 1.5em;
+    padding: 2em;
+    font-weight: 600;
+    background-color: rgb(250, 250, 250);
 }
