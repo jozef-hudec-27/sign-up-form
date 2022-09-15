@@ -1,4 +1,13 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    font-family: sans-serif;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -8,10 +17,21 @@ body {
 .logo-container {
     width: 35%;
     display: flex;
-    background-image: url('./bg.jpg');
+    flex-direction: column;
+    background-image: url('./img/bg.jpg');
     background-position: center;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+.logo-container > p {
+    margin-top: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-container > p > a {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .content-container {
@@ -21,12 +41,24 @@ body {
 }
 
 .logo {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    font-family: norsebold, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    padding: 1em;
+    padding: 0 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    padding: 16px 0;
+    margin-top: 2em;
+}
+
+.logo > img {
+    width: 80px;
+}
+
+.logo > p {
+    margin: 0;
 }
 
 .content-text-container {
@@ -83,6 +115,7 @@ input {
     font-weight: 600;
 }
 
-p > a {
+a {
     text-decoration: none;
 }
+
