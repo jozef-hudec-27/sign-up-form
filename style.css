@@ -101,6 +101,15 @@ form label {
     color: rgba(0, 0, 0, 0.7);
 }
 
+input + a {
+    color: red;
+    text-transform: none;
+    font-size: 0.8em;
+    margin-top: 8px;
+    position: absolute;
+    top: 56px;
+}
+
 input {
     appearance: none;
     width: 224px;

@@ -55,11 +55,12 @@
                     </p>
                 </div>
 
-                <div>
+                <div style="position: relative;">
                     <p>
                         <label for="password">Password <span aria-label="required">*</span></label>
                         <input type="password" id="password" minlength="8" maxlength="50"
                         title="Password must be at least 8 characters and at most 50 characters." placeholder="••••••••••" required>
+                        <a></a>
                     </p>
 
                     <p>
@@ -75,5 +76,27 @@
 
         <p>Already have an account? <a href="#">Log in</a></p>
     </div>
+
+    <script>
+        const passwordInput = document.getElementById('password')
+        const confirmPasswordInput = document.getElementById('confirm-password')
+        const invalidPasswordContainer = passwordInput.nextElementSibling
+
+        passwordInput.addEventListener('input', e => {
+            if (e.target.value !== confirmPasswordInput.value) {
+                invalidPasswordContainer.textContent = '• Passwords do not match'
+            } else {
+                invalidPasswordContainer.textContent = ''
+            }
+        })
+
+        confirmPasswordInput.addEventListener('input', e => {
+            if (e.target.value !== passwordInput.value) {
+                invalidPasswordContainer.textContent = '• Passwords do not match'
+            } else {
+                invalidPasswordContainer.textContent = ''
+            }
+        })
+    </script>
 </body>
 </html>
