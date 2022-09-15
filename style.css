@@ -78,4 +78,11 @@ input {
     font-weight: 600;
 }
 
+.submit-btn + p {
+    margin: 1.5em 3em;
+    font-weight: 600;
+}
 
+p > a {
+    text-decoration: none;
+}
